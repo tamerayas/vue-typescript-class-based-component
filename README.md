@@ -1,4 +1,4 @@
-# vue-typescript
+# vue-typescript-class-based-components
 
 ## Project setup
 ```
