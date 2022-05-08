@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div ref="counterComponent">
     <div>
       <button v-on:click="decrement">decrement</button>
       <button v-on:click="increment">increment</button>
       <p>{{ count }}</p>
 
-      <SubCounter @decrement="decrement"/>
+      <SubCounter @decrement="decrement" />
     </div>
   </div>
 </template>
@@ -24,12 +24,14 @@ export default class Counter extends Vue {
 
   private decrement(): void {
     this.count += 1;
+    this.$emit('changed', this.count)
   }
 
   public increment(): void {
     if (this.count === 0) return;
 
     this.count -= 1;
+    this.$emit('changed', this.count)
   }
 }
 </script>

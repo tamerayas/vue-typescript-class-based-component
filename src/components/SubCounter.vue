@@ -7,6 +7,8 @@ import { Component, Vue, Emit } from "vue-property-decorator";
 
 @Component
 export default class SubCounter extends Vue {
+
+  
   // Both of decrement emit and addToCount method works.
   @Emit("decrement")
   addToCount() {
@@ -21,6 +23,9 @@ export default class SubCounter extends Vue {
     return;
   }
   */
+
+
+
 
   private mounted() {
     console.log("mounted");
